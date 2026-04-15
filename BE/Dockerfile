@@ -1,17 +1,3 @@
-# Use the official httpd image from Docker Hub
-FROM httpd:latest
-
-# Copy custom website content into the default Apache directory
-COPY ./index.html/ /usr/local/apache2/htdocs/
-
-# Expose the default Apache HTTP port
-EXPOSE 80
-
-# Start the Apache HTTP Server
-CMD ["httpd-foreground"]
-
-root@ip-172-31-25-49:~/Studentapp-DOCKER/FE# cd ../BE/
-root@ip-172-31-25-49:~/Studentapp-DOCKER/BE# cat Dockerfile 
 FROM ubuntu:22.04
 LABEL dev="Ishika"
 
